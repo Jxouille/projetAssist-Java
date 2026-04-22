@@ -43,7 +43,7 @@ public class Pilote extends Employe {
     @Override
     public void obtenirInfos() {
         super.obtenirInfos();
-        System.out.println("Licence: " licence);
+        System.out.println("Licence: " +  licence);
         System.out.println("Heures de vol: " + heuresDeVol);
     }
 }

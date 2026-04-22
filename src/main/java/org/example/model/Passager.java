@@ -33,7 +33,7 @@ public class Passager extends Personne {
     public void annulerReservation(String numeroReservation) {
         for (int i = 0; i < reservations.size(); i++) {
             Reservation r = reservations.get(i);
-            if (r.getNumeroReservations().equals(numeroReservation)) {
+            if (r.getNumeroReservation().equals(numeroReservation)) {
                 reservations.remove(i);
                 System.out.println("Réservation " + numeroReservation + " annulée.");
                 return;

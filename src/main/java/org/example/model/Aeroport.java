@@ -36,7 +36,7 @@ public class Aeroport {
     }
 
     public void affecterVol(Vol vol) {
-        System.out.println("Vol " + vol.getNumeroVol() + " affecté à l'aéroport " + nom;
+        System.out.println("Vol " + vol.getNumeroVol() + " affecté à l'aéroport " + nom);
     }
 
     public void obtenirInfos() {
