@@ -7,6 +7,9 @@ import java.util.List;
 public class GestionVols {
     private List<Vol> vols;
 
+    public List<Vol> getVols() { return vols; }
+    public void setVols(List<Vol> vols) { this.vols = vols; }
+
     public GestionVols() {
         this.vols = new ArrayList<>();
     }

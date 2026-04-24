@@ -3,6 +3,8 @@ package org.example;
 import org.example.model.*;
 import org.example.service.*;
 import java.util.Scanner;
+import org.example.util.*;
+import java.util.List;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
@@ -21,6 +23,8 @@ public class Main {
             System.out.println("3. Gestion des passagers");
             System.out.println("4. Gestion des avions");
             System.out.println("5. Gestion des employés");
+            System.out.println("6. Sauvegarder les données");
+            System.out.println("7. Charger les données");
             System.out.println("0. Quitter");
             System.out.print("Votre choix : ");
             choix = scanner.nextInt();
@@ -32,6 +36,18 @@ public class Main {
                 case 3: menuPassagers(); break;
                 case 4: menuAvions(); break;
                 case 5: menuEmployes(); break;
+                case 6:
+                    CsvVols.sauvegarderVols(gestionVols.getVols());
+                    CsvPassagers.sauvegarderPassagers(gestionPassagers.getPassagers());
+                    CsvReservations.sauvegarderReservations(gestionReservations.getReservations());
+                    System.out.println("Données sauvegardées !");
+                    break;
+                case 7:
+                    gestionVols.setVols(CsvVols.chargerVols());
+                    gestionPassagers.setPassagers(CsvPassagers.chargerPassagers());
+                    gestionReservations.setReservations(CsvReservations.chargerReservations(gestionPassagers.getPassagers()));
+                    System.out.println("Données chargées !");
+                    break;
                 case 0: System.out.println("Au revoir !"); break;
                 default: System.out.println("Choix invalide.");
             }

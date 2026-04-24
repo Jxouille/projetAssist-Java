@@ -13,6 +13,9 @@ public class GestionReservation {
         this.reservations = new ArrayList<>();
     }
 
+    public List<Reservation> getReservations() { return reservations; }
+    public void setReservations(List<Reservation> reservations) { this.reservations = reservations; }
+
     public void ajouterReservations( Reservation reservation) {
         reservations.add(reservation);
         System.out.println("Réservation " + reservation.getNumeroReservation() + " ajoutée.");

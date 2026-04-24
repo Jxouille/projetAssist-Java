@@ -11,6 +11,9 @@ public class GestionPassagers {
         this.passagers = new ArrayList<>();
     }
 
+    public List<Passager> getPassagers() { return passagers; }
+    public void setPassagers(List<Passager> passagers) { this.passagers = passagers; }
+
     public void ajouterPassager(Passager passager) {
         passagers.add(passager);
         System.out.println("Passager " + passager.getNom() + " ajouté.");
